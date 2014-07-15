@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <title>Simmons/Rooms</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="horz header">
+  <div class="content">
+    <div class="masthead">
+    	<img class="masthead-img" src="img/masthead_sq.png">
+    </div>
+    <div class="masthead">
+    	<span>SIMMONS/<b>Rooms</b></span>
+    </div>
+  </div>
+  <div class="search">
+	  <input type="text" onkeydown="submitIfEnter(event)" onkeyup="userHasTyped(this.value)" class="search-box" placeholder="search residents by name, email, or room number">
+	  <button class="btn" onclick="search()">
+	   Search
+	  </button>
+  </div>
+</div>
+
+<div class="horz ctrls">
+  <div class="content">
+
+    <div class="controls">
+      <div class="label">Type</div>
+      <button class="btn btn-select engaged btn-all">All</button>
+      <button class="btn btn-select btn-doublesOnly">Doubles</button>
+      <button class="btn btn-select btn-singlesOnly">Singles</button>
+    </div>
+
+    <div class="controls">
+      <div class="label">Side</div>
+      <button class="btn btn-select engaged btn-allSides">All</button>
+      <button class="btn btn-select btn-bostonSideOnly">Boston</button>
+      <button class="btn btn-select btn-cambridgeSideOnly">Cambridge</button>
+    </div>
+
+    <div class="controls">
+      <div class="label">Walls</div>
+      <button class="btn btn-select engaged btn-allWalls">All</button>
+      <button class="btn btn-select btn-boxyWallsOnly">Boxy</button>
+      <button class="btn btn-select btn-curvyWallsOnly">Curvy</button>
+    </div>
+    <div class="footnote">
+      * : The bathroom is <i>outside</i> of the room, but not shared with any other room(s).
+    </div>
+  </div>
+</div>
+
+<div class="horz rslts">
+  <div class="content">
+    <div class="lists">
+      <div class="results-list-doubles-label">Doubles</div>
+      <div class="results-list-doubles">
+      <div class="item" title="123">
+        <span class="number"> 123 </span>
+        <span class="size"> 042 sq. ft.</span>
+        <span class="view">' Cambridge '</span>
+      </div>
+      <div class="item" title="123">
+        <span class="number"> 123 </span>
+        <span class="size"> 042 sq. ft.</span>
+        <span class="view">' Cambridge '</span>
+      </div>
+      </div>
+      <div class="results-list-singles-label">Singles</div>
+      <div class="results-list-singles">
+      <div class="item" title="123">
+        <span class="number"> 123 </span>
+        <span class="size"> 042 sq. ft.</span>
+        <span class="view">' Cambridge '</span>
+      </div>
+      <div class="item" title="123">
+        <span class="number"> 123 </span>
+        <span class="size"> 042 sq. ft.</span>
+        <span class="view">' Cambridge '</span>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
