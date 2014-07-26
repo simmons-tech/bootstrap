@@ -26,15 +26,16 @@ a {
 .horz {
   position:relative;
   width:100%;
+  &.ctrls {
+    padding:20px 0;
+    background-color:#ffffff;
+  }
+  &.rslts {
+    padding:20px 0;
+    background-color:#eeeeee;
+  }
 }
-.horz.ctrls {
-  padding:20px 0;
-  background-color:#ffffff;
-}
-.horz.rslts {
-  padding:20px 0;
-  background-color:#eeeeee;
-}
+
 .content {
   position:relative;
   margin-left:auto;
@@ -46,7 +47,7 @@ a {
 .masthead {
   position:absolute;
   top:22px;
-  left:0;
+  left:22px;
   height:48px;
   line-height:48px;
   font-size:30px;
@@ -100,25 +101,20 @@ a {
   transition:background-color .3s;
   cursor:pointer;
   color:#555555;
+  &:hover {
+    background-color:#eeeeee;
+  }
+  &.engaged {
+    color:#ffffff;
+    background-color:#53adf9;
+    border:solid 1px #53adf9;
+    &:hover {
+      background-color:#6dc7ff;
+      border:solid 1px #6dc7ff;
+    }
+  }
 }
 
-.btn:hover {
-  background-color:#eeeeee;
-}
-
-.btn.engaged {
-  color:#ffffff;
-  background-color:#53adf9;
-  border:solid 1px #53adf9;
-}
-
-.btn.engaged:hover {
-  background-color:#6dc7ff;
-  border:solid 1px #6dc7ff;
-}
-.btn-consider {
-  width:180px;
-}
 .btn-section {
   color:rgba(255,255,255,0.85);
   background-color:#54ab67;
@@ -202,11 +198,11 @@ a {
   width:100%;
   display:block;
   position:relative;
-}
-.map-wrapper:after {
-  padding-top:37.5%;
-  display:block;
-  content:'';
+  &:after {
+    padding-top:37.5%;
+    display:block;
+    content:'';
+  }
 }
 .map {
   position:absolute;
