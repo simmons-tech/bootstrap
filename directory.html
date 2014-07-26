@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <html>
 <head>
-  <title>Simmons/Rooms</title>
+  <title>Simmons/Directory</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
     	<img class="masthead-img" src="img/masthead_sq.png">
     </div>
     <div class="masthead">
-    	<span>SIMMONS/<b>Rooms</b></span>
+    	<span>SIMMONS/<b>Directory</b></span>
     </div>
   </div>
   <div class="search">
@@ -21,35 +22,6 @@
 	  <button class="btn" onclick="search()">
 	   Search
 	  </button>
-  </div>
-</div>
-
-<div class="horz ctrls">
-  <div class="content">
-
-    <div class="controls">
-      <div class="label">Type</div>
-      <button class="btn btn-select engaged btn-all">All</button>
-      <button class="btn btn-select btn-doublesOnly">Doubles</button>
-      <button class="btn btn-select btn-singlesOnly">Singles</button>
-    </div>
-
-    <div class="controls">
-      <div class="label">Side</div>
-      <button class="btn btn-select engaged btn-allSides">All</button>
-      <button class="btn btn-select btn-bostonSideOnly">Boston</button>
-      <button class="btn btn-select btn-cambridgeSideOnly">Cambridge</button>
-    </div>
-
-    <div class="controls">
-      <div class="label">Walls</div>
-      <button class="btn btn-select engaged btn-allWalls">All</button>
-      <button class="btn btn-select btn-boxyWallsOnly">Boxy</button>
-      <button class="btn btn-select btn-curvyWallsOnly">Curvy</button>
-    </div>
-    <div class="footnote">
-      * : The bathroom is <i>outside</i> of the room, but not shared with any other room(s).
-    </div>
   </div>
 </div>
 
@@ -2180,41 +2152,36 @@
 
 
       </div> <!-- map-wrapper -->
-</div>
 
-<div class="horz rslts">
-  <div class="content">
-    <div class="lists">
-      <div class="results-list-doubles-label">Doubles</div>
-      <div class="results-list-doubles">
-      <div class="item" title="123">
-        <span class="number"> 123 </span>
-        <span class="size"> 042 sq. ft.</span>
-        <span class="view">' Cambridge '</span>
+      <div class="footer">
+
+        <div class="column">
+          <strong>Map Preferences</strong></br>
+          <small>Select what you'd like to see.</small>
+          <div class="vert controls">
+            <button class="btn engaged btn-lounges">Social Lounges</button><br/>
+            <button class="btn engaged btn-kitches">Kitchens</button><br/>
+            <button class="btn engaged btn-firestairs">Access Stairs</button><br/>
+            <button class="btn engaged btn-facilities">Common Facilities</button><br/>
+            <button class="btn engaged btn-laundry">Laundry</button><br/>
+            <button class="btn engaged btn-elevators">Elevators</button><br/>
+            <button class="btn engaged btn-dining">Dining</button><br/>
+          </div>
+        </div>
+
+        <div class="column">
+          <strong>Search Results</strong></br>
+          <small>All matches appear here.</small>
+          <div class="results"></div>
+        </div>
+
       </div>
-      <div class="item" title="123">
-        <span class="number"> 123 </span>
-        <span class="size"> 042 sq. ft.</span>
-        <span class="view">' Cambridge '</span>
-      </div>
-      </div>
-      <div class="results-list-singles-label">Singles</div>
-      <div class="results-list-singles">
-      <div class="item" title="123">
-        <span class="number"> 123 </span>
-        <span class="size"> 042 sq. ft.</span>
-        <span class="view">' Cambridge '</span>
-      </div>
-      <div class="item" title="123">
-        <span class="number"> 123 </span>
-        <span class="size"> 042 sq. ft.</span>
-        <span class="view">' Cambridge '</span>
-      </div>
-      </div>
+
+    <div class="footnote">
+      Uses jQuery, jQuery Tipsy, SVG. Design and implementation by <a href="http://www.cosmosdarwin.com/"> Cosmos Darwin</a>, MIT '15.
     </div>
 
-  </div>
-</div>
+    </div> <!-- wrapper -->
 
-</body>
+  </body>
 </html>
