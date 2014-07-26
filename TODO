@@ -1,5 +1,22 @@
-[ ] Client side LESS for testing purposes.
+General
+[X] Client side LESS for testing purposes.
 [ ] Handlebars.js integration?
-[ ] More example app mockups?
+[/] More example app mockups?
 [ ] PhantomJS based tests?
 [ ] Get this motherfucking SVG out of the motherfucking HTML.
+[ ] Update Mockups with Inputs.
+[ ] Browser-Compatability testing.
+
+Unit Testing / Tasks
+[ ] Colors
+[/] Text
+[ ] Input
+[ ] Structure
+[ ] Masthead/Search Bar
+[ ] Map
+[X] Loading
+
+Input
+[ ] Text formatting
+[ ] <select> Funkyness
+[ ] Forced newlines between checkboxes 

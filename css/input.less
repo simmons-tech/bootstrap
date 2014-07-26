@@ -1,0 +1,89 @@
+@input-height: 10px;
+
+/* Reusable Mixins */
+
+.button-mixin(@fill-color, @border-color, @text-color, @hover-fill-color, @hover-border-color) {
+	cursor:pointer;
+	padding:8px 10px;
+	border-radius:3px;
+	border:solid 1px @border-color;
+	background-color:@fill-color;
+	transition:background-color .3s;
+	color: @text-color;
+	&:hover {
+		background-color: @hover-fill-color;
+		border:solid 1px @hover-border-color;
+	}
+}
+
+.button-default-mixin {
+	.button-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+}
+
+.button-active-mixin {
+	.button-mixin(#53adf9, #53adf9, #ffffff, #6dc7ff, #6dc7ff);
+}
+.entry-mixin(@fill-color, @border-color, @text-color, @hover-fill-color, @hover-border-color) {
+	cursor: text;
+	outline:0;
+	padding:8px 10px;
+	border-radius:3px;
+	border:solid 1px @border-color;
+	background-color: @fill-color;
+	color: @text-color;
+	&:hover, &:focus {
+		background-color: @hover-fill-color;
+		border:solid 1px @hover-border-color;
+	}
+}
+
+.entry-default-mixin {
+	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+}
+
+
+/* Buttons and Submits */
+
+button, input[type=submit] {
+	.button-default-mixin;
+	&:active {
+		.button-active-mixin;
+	}
+}
+
+/* Select */
+
+select {
+	.button-default-mixin;
+	&:focus {
+		.button-active-mixin;
+	}
+}
+
+/* Text Input */
+
+input[type="text"], input[type="password"] {
+	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+}
+
+textarea {
+	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+}
+
+/* Checkboxes and Radio Buttons */
+
+input[type=checkbox], input[type=radio] {
+	visibility: hidden;
+	margin: 0;
+    	padding: 0;
+    	display:block;
+    	overflow:hidden;
+}
+
+label {
+	.button-default-mixin;
+}
+
+input[type=checkbox]:checked + label, input[type=radio]:checked + label {
+	.button-active-mixin;
+}
