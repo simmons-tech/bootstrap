@@ -4,13 +4,13 @@ General
 [/] More example app mockups?
 [ ] PhantomJS based tests?
 [ ] Get this motherfucking SVG out of the motherfucking HTML.
-[ ] Update Mockups with Inputs.
+[X] Update Mockups with Inputs.
 [ ] Browser-Compatability testing.
 
 Unit Testing / Tasks
-[ ] Colors
+[ ] Colors (Swatches?)
 [/] Text
-[ ] Input
+[/] Input
 [ ] Structure
 [ ] Masthead/Search Bar
 [ ] Map
@@ -19,4 +19,4 @@ Unit Testing / Tasks
 Input
 [ ] Text formatting
 [ ] <select> Funkyness
-[ ] Forced newlines between checkboxes 
+[X] Forced newlines between checkboxes 

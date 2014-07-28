@@ -1,4 +1,27 @@
+@import "font.less";
+@import "color.less";
+
 @input-height: 10px;
+
+/* Helper Divs */
+
+.controls {
+	display:inline-block;
+	padding:0 10px;
+	margin:0 0 10px 0;
+	.label {
+		padding:2px 0;
+		font-size:20px;
+		font-weight:400;
+		border-bottom:solid 1px #dddddd;
+		margin-bottom:12px;
+	}
+	&.horz {
+		input {
+			float: left;
+		}
+	}
+}
 
 /* Reusable Mixins */
 
@@ -17,12 +40,13 @@
 }
 
 .button-default-mixin {
-	.button-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+	.button-mixin(@white, @grey, @dark-grey, @light-grey, @grey);
 }
 
 .button-active-mixin {
-	.button-mixin(#53adf9, #53adf9, #ffffff, #6dc7ff, #6dc7ff);
+	.button-mixin(@blue, @blue, @white, @light-blue, @light-blue);
 }
+
 .entry-mixin(@fill-color, @border-color, @text-color, @hover-fill-color, @hover-border-color) {
 	cursor: text;
 	outline:0;
@@ -38,7 +62,7 @@
 }
 
 .entry-default-mixin {
-	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+	.entry-mixin(@white, @grey, @dark-grey, @light-grey, @grey);
 }
 
 
@@ -63,20 +87,19 @@ select {
 /* Text Input */
 
 input[type="text"], input[type="password"] {
-	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+	.entry-default-mixin;
 }
 
 textarea {
-	.entry-mixin(#ffffff, #dddddd, #555555, #eeeeee, #dddddd);
+	.entry-default-mixin;
 }
 
 /* Checkboxes and Radio Buttons */
 
 input[type=checkbox], input[type=radio] {
-	visibility: hidden;
+	display: none;
 	margin: 0;
     	padding: 0;
-    	display:block;
     	overflow:hidden;
 }
 

@@ -3,7 +3,12 @@
 <html>
 <head>
   <title>Simmons/Rooms</title>
-  <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/page.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/masthead.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/searchbar.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/map.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/input.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/layout.less" />
   <script src="js/less.js" type="text/javascript"></script>
 </head>
 <body>
@@ -17,39 +22,84 @@
     	<span>SIMMONS/<b>Rooms</b></span>
     </div>
   </div>
-  <div class="search">
-	  <input type="text" onkeydown="submitIfEnter(event)" onkeyup="userHasTyped(this.value)" class="search-box" placeholder="search residents by name, email, or room number">
-	  <button class="btn" onclick="search()">
-	   Search
-	  </button>
+  <div class="search-container">
+	  <input type="text" onkeydown="submitIfEnter(event)" onkeyup="userHasTyped(this.value)" class="search-input" placeholder="search residents by name, email, or room number">
+	  <button class="btn" onclick="search()">Search</button>
   </div>
 </div>
 
 <div class="horz ctrls">
   <div class="content">
 
-    <div class="controls">
+    <div class="horz controls">
       <div class="label">Type</div>
-      <button class="btn btn-select engaged btn-all">All</button>
-      <button class="btn btn-select btn-doublesOnly">Doubles</button>
-      <button class="btn btn-select btn-singlesOnly">Singles</button>
+	<input type="radio" name="occupancy" id='all-occupancy' value="None" checked="checked">
+	<label for="all-occupancy">All</label>
+	<input type="radio" name="occupancy" id='doubles' value="None">
+	<label for="doubles">Doubles</label>
+	<input type="radio" name="occupancy" id='singles' value="None">
+	<label for="singles">Singles</label>
     </div>
 
-    <div class="controls">
+    <div class="horz controls">
       <div class="label">Side</div>
-      <button class="btn btn-select engaged btn-allSides">All</button>
-      <button class="btn btn-select btn-bostonSideOnly">Boston</button>
-      <button class="btn btn-select btn-cambridgeSideOnly">Cambridge</button>
+	<input type="radio" name="side" id='all-sides' value="None" checked="checked">
+	<label for="all-sides">All</label>
+	<input type="radio" name="side" id='boston' value="None">
+	<label for="boston">Boston</label>
+	<input type="radio" name="side" id='cambridge' value="None">
+	<label for="cambridge">Cambridge</label>
     </div>
 
-    <div class="controls">
+    <div class="horz controls">
       <div class="label">Walls</div>
-      <button class="btn btn-select engaged btn-allWalls">All</button>
-      <button class="btn btn-select btn-boxyWallsOnly">Boxy</button>
-      <button class="btn btn-select btn-curvyWallsOnly">Curvy</button>
+	<input type="radio" name="walls" id='all-walls' value="None" checked="checked">
+	<label for="all-walls">All</label>
+	<input type="radio" name="walls" id='boxy' value="None">
+	<label for="boxy">Boxy</label>
+	<input type="radio" name="walls" id='curvy' value="None">
+	<label for="curvy">Curvy</label>
     </div>
+
+    <div class="horz controls">
+      <div class="label">Bathroom</div>
+	<input type="radio" name="bathroom" id='all-bathrooms' value="None" checked="checked">
+	<label for="all-bathrooms">All</label>
+	<input type="radio" name="bathroom" id='shared' value="None">
+	<label for="shared">Shared</label>
+	<input type="radio" name="bathroom" id='unshared' value="None">
+	<label for="unshared">Unshared*</label>
+	<input type="radio" name="bathroom" id='private' value="None">
+	<label for="private">Private</label>
+    </div>
+
     <div class="footnote">
       * : The bathroom is <i>outside</i> of the room, but not shared with any other room(s).
+    </div>
+
+    <div class="horz controls">
+      <div class="label">Sections</div>
+	<input type="checkbox" name="section" id='23AB' value="None" checked="checked">
+	<label for="23AB">2-3 AB</label>
+	<input type="checkbox" name="section" id='34C' value="None" checked="checked">
+	<label for="34C">3-4 C</label>
+	<input type="checkbox" name="section" id='4AB' value="None" checked="checked">
+	<label for="4AB">4 AB</label>
+	<input type="checkbox" name="section" id='5AB' value="None" checked="checked">
+	<label for="5AB">5 AB</label>
+	<input type="checkbox" name="section" id='6AB' value="None" checked="checked">
+	<label for="6AB">6 AB</label>
+	<input type="checkbox" name="section" id='56C' value="None" checked="checked">
+	<label for="56C">5-6 C</label>
+	<input type="checkbox" name="section" id='7ABC' value="None" checked="checked">
+	<label for="7ABC">7 ABC</label>
+	<input type="checkbox" name="section" id='8910A' value="None" checked="checked">
+	<label for="8910A">A Tower</label>
+	<input type="checkbox" name="section" id='8910B' value="None" checked="checked">
+	<label for="8910B">B Tower</label>
+	<input type="checkbox" name="section" id='8910C' value="None" checked="checked">
+	<label for="8910C">C Tower</label>
+      <button class="btn btn-toggleAllSections">Toggle All</button>
     </div>
   </div>
 </div>

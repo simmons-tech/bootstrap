@@ -1,0 +1,83 @@
+// TODO: Generalize
+.horz {
+  //position:relative;
+  //width:100%;
+  &.ctrls {
+    padding:20px 0;
+    background-color:#ffffff;
+  }
+  &.rslts {
+    padding:20px 0;
+    background-color:#eeeeee;
+  }
+}
+
+.lists {
+  position:relative;
+  display:block;
+}
+.results-list-doubles-label {
+  position:absolute;
+  padding:0 0 20px 10px;
+  font-weight:400;
+  font-size:28px;
+  top:20px;
+  left:0;
+}
+.results-list-singles-label {
+  position:absolute;
+  padding:0 0 20px 10px;
+  font-weight:400;
+  font-size:28px;
+  top:20px;
+  left:50%;
+}
+.results-list-doubles {
+  display:inline-block;
+  position:absolute;
+  width:49.8%;
+  top:80px;
+  left:0;
+}
+.results-list-singles {
+  display:inline-block;
+  position:absolute;
+  width:49.8%;
+  top:80px;
+  left:50%;
+}
+
+// TODO: Seems like these belong in a "search results" file
+.item {
+  position:relative;
+  background-color:#ffffff;
+  padding:10px;
+  height:20px;
+  cursor:pointer;
+  margin-bottom:1px;
+}
+.item:hover {
+  background-color:#53adf9;
+  color:#ffffff;
+  span {
+    color:#ffffff;
+  }
+}
+.size {
+  position:absolute;
+  font-weight:400;
+  color:#bbbbbb;
+  left:90px;
+}
+.view {
+  position:absolute;
+  font-weight:400;
+  color:#bbbbbb;
+  left:190px;
+}
+.number {
+  position:absolute;
+  font-weight:700;
+  color:#222222;
+  left:20px;
+}

@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!DOCTYPE html>
+
 <html>
 <head>
   <title>Simmons/Directory</title>
-  <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/page.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/masthead.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/searchbar.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/map.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/input.less" />
+  <link rel="stylesheet/less" type="text/css" href="css/layout.less" />
   <script src="js/less.js" type="text/javascript"></script>
 </head>
 <body>
@@ -18,11 +22,36 @@
     	<span>SIMMONS/<b>Directory</b></span>
     </div>
   </div>
-  <div class="search">
-	  <input type="text" onkeydown="submitIfEnter(event)" onkeyup="userHasTyped(this.value)" class="search-box" placeholder="search residents by name, email, or room number">
-	  <button class="btn" onclick="search()">
-	   Search
-	  </button>
+  <div class="search-container">
+	  <input type="text" onkeydown="submitIfEnter(event)" onkeyup="userHasTyped(this.value)" class="search-input" placeholder="search residents by name, email, or room number">
+	  <button class="btn" onclick="search()">Search</button>
+  </div>
+</div>
+
+<div class="horz ctrls">
+  <div class="content">
+    <div class="horz controls">
+      <div class="label">Map Preferences</div>
+	<input type="checkbox" name="prefs" id='lounges' value="None" checked="checked">
+	<label for="lounges">Lounges</label>
+	<input type="checkbox" name="pref" id='kitchens' value="None" checked="checked">
+	<label for="kitchens">Kitchens</label>
+	<input type="checkbox" name="pref" id='firestairs' value="None" checked="checked">
+	<label for="firestairs">Fire Stairs</label>
+	<input type="checkbox" name="pref" id='facilities' value="None" checked="checked">
+	<label for="facilities">Common Facilities</label>
+	<input type="checkbox" name="pref" id='laundry' value="None" checked="checked">
+	<label for="laundry">Laundry</label>
+	<input type="checkbox" name="pref" id='elevators' value="None" checked="checked">
+	<label for="elevators">Elevators</label>
+	<input type="checkbox" name="pref" id='dining' value="None" checked="checked">
+	<label for="dining">Dining</label>
+	
+        <button class="btn btn-toggleAllSections">Toggle All</button>
+	<div class="footnote">
+		Select what you'd like to see.
+	</div>
+    </div>
   </div>
 </div>
 
@@ -2157,20 +2186,6 @@
       <div class="footer">
 
         <div class="column">
-          <strong>Map Preferences</strong></br>
-          <small>Select what you'd like to see.</small>
-          <div class="vert controls">
-            <button class="btn engaged btn-lounges">Social Lounges</button><br/>
-            <button class="btn engaged btn-kitches">Kitchens</button><br/>
-            <button class="btn engaged btn-firestairs">Access Stairs</button><br/>
-            <button class="btn engaged btn-facilities">Common Facilities</button><br/>
-            <button class="btn engaged btn-laundry">Laundry</button><br/>
-            <button class="btn engaged btn-elevators">Elevators</button><br/>
-            <button class="btn engaged btn-dining">Dining</button><br/>
-          </div>
-        </div>
-
-        <div class="column">
           <strong>Search Results</strong></br>
           <small>All matches appear here.</small>
           <div class="results"></div>
@@ -2179,7 +2194,7 @@
       </div>
 
     <div class="footnote">
-      Uses jQuery, jQuery Tipsy, SVG. Design and implementation by <a href="http://www.cosmosdarwin.com/"> Cosmos Darwin</a>, MIT '15.
+      Uses jQuery, jQuery Tipsy, and SVG; Design and implementation by <a href="http://www.cosmosdarwin.com/"> Cosmos Darwin</a>, MIT '15.
     </div>
 
     </div> <!-- wrapper -->

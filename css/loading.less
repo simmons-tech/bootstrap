@@ -1,13 +1,9 @@
-@import url('http://fonts.googleapis.com/css?family=Lato');
-
-@red: #e84835;
-@yellow: #f2b429;
-@blue: #94c0e9;
-@green: #46b646;
-@white: #fff;
+@import "font.less";
+@import "color.less";
 
 @ball-radius: 10px;
 
+// TODO: These have no place in loading.less
 html, body {
 	width: 100%;
 	height: 100%;
@@ -36,6 +32,7 @@ html, body {
 		color: @yellow;
 		font-size: 12px;
 		text-align: center;
+		font-family: 'Lato',sans-serif;
 	}
 	ul {
 		list-style: none;
