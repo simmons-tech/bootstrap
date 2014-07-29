@@ -20,7 +20,8 @@ Unit Testing / Tasks
 
 Input
 [ ] Text formatting in input elements
-[ ] Margin funkyness / consistency.
+[ ] Margin funkyness / consistency. Button vs. Checkbox / Input
+[ ] Layout integration? input-layout for horz vs. vert stuff?
 [ ] <select> Funkyness; maybe not very fixable without JS?
 [X] Forced newlines between checkboxes 
 
