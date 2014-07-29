@@ -1,12 +1,33 @@
+//// Color Defintions
+// Core Colors
 @red:    #ea6671;
 @yellow: #fee35e;
 @blue: #53adf9;
 @green: #6bb97d;
+// Light Colors
+@light-red: lighten(@red, 10%);
+@light-yellow: lighten(@yellow, 10%);
+@light-blue: lighten(@blue, 10%);
+@light-green: lighten(@green, 10%);
+// Greyscale Colors
 @white: #fff;
-
-@dark-grey: #555;
-@grey: #ddd;
 @light-grey: #eee;
+@grey: #ddd;
+@dark-grey: #555;
 
-// Lighter
-@light-blue: #6dc7ff;
+//// Color Class Mixins.
+// Core Colors
+.red{background-color:@red;}
+.yellow{background-color:@yellow;}
+.blue{background-color:@blue;}
+.green{background-color:@green;}
+// Light Colors
+.light-red{background-color:@light-red;}
+.light-yellow{background-color:@light-yellow;}
+.light-blue{background-color:@light-blue;}
+.light-green{background-color:@light-green;}
+// Greyscale Colors
+.white{background-color:@white;}
+.light-grey{background-color:@light-grey;}
+.grey{background-color:@grey;}
+.dark-grey{background-color:@dark-grey;}

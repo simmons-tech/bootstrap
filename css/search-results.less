@@ -1,0 +1,36 @@
+@import "font.less";
+@import "color.less";
+
+.item {
+	position:relative;
+	background-color:@white;
+	padding:10px;
+	height:20px;
+	cursor:pointer;
+	margin-bottom:1px;
+	&:hover {
+		background-color:@blue;
+		color:@white;
+		span {
+			color:@white;
+		}
+	}
+	.size {
+	  position:absolute;
+	  font-weight:400;
+	  color:@dark-grey;
+	  left:90px;
+	}
+	.view {
+	  position:absolute;
+	  font-weight:400;
+	  color:@dark-grey;
+	  left:190px;
+	}
+	.number {
+	  position:absolute;
+	  font-weight:700;
+	  color:@dark-grey;
+	  left:20px;
+	}
+}

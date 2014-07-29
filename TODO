@@ -6,17 +6,24 @@ General
 [ ] Get this motherfucking SVG out of the motherfucking HTML.
 [X] Update Mockups with Inputs.
 [ ] Browser-Compatability testing.
+[X] Columns based on table-display
 
 Unit Testing / Tasks
-[ ] Colors (Swatches?)
+[X] Colors (Swatches?)
 [/] Text
 [/] Input
-[ ] Structure
+[/] Structure
 [ ] Masthead/Search Bar
 [ ] Map
 [X] Loading
+[ ] Warning / Error Bar.
 
 Input
-[ ] Text formatting
-[ ] <select> Funkyness
+[ ] Text formatting in input elements
+[ ] Margin funkyness / consistency.
+[ ] <select> Funkyness; maybe not very fixable without JS?
 [X] Forced newlines between checkboxes 
+
+Color
+[ ] More elegant swatches
+[ ] Purple color? We used to have that...
