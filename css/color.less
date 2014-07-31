@@ -1,33 +1,48 @@
 //// Color Defintions
-// Core Colors
-@red:    #ea6671;
-@yellow: #fee35e;
-@blue: #53adf9;
-@green: #6bb97d;
-// Light Colors
-@light-red: lighten(@red, 10%);
-@light-yellow: lighten(@yellow, 10%);
-@light-blue: lighten(@blue, 10%);
-@light-green: lighten(@green, 10%);
+// Vibrant Colors
+@red: #bf1e2e;
+@yellow: #ffde16;
+@green: #0b9444;
+@blue: #25aae1;
+
+// Soft Colors
+@pale-red:    #ea6671;
+@pale-yellow: #fee35e;
+@pale-blue: #6abbfa;
+@pale-green: #6bb97d;
+
 // Greyscale Colors
+@black: #000;
+@darkest-gray: #222;
+@darker-gray: #444;
+@dark-gray: #777;
+@gray: #bbb;
+@light-gray: #ddd;
+@lighter-gray: #eee;
+@lightest-gray: #f7f7f7;
 @white: #fff;
-@light-grey: #eee;
-@grey: #ddd;
-@dark-grey: #555;
 
 //// Color Class Mixins.
-// Core Colors
+
+// Vibrant Colors
 .red{background-color:@red;}
 .yellow{background-color:@yellow;}
 .blue{background-color:@blue;}
 .green{background-color:@green;}
-// Light Colors
-.light-red{background-color:@light-red;}
-.light-yellow{background-color:@light-yellow;}
-.light-blue{background-color:@light-blue;}
-.light-green{background-color:@light-green;}
+
+// Soft Colors
+.pale-red{background-color:@pale-red;}
+.pale-yellow{background-color:@pale-yellow;}
+.pale-blue{background-color:@pale-blue;}
+.pale-green{background-color:@pale-green;}
+
 // Greyscale Colors
+.black{background-color:@black;}
+.darkest-gray{background-color:@darkest-gray;}
+.darker-gray{background-color:@darker-gray;}
+.dark-gray{background-color:@dark-gray;}
+.gray{background-color:@gray;}
+.light-gray{background-color:@light-gray;}
+.lighter-gray{background-color:@lighter-gray;}
+.lightest-gray{background-color:@lightest-gray;}
 .white{background-color:@white;}
-.light-grey{background-color:@light-grey;}
-.grey{background-color:@grey;}
-.dark-grey{background-color:@dark-grey;}
